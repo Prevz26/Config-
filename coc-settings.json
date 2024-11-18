@@ -1,0 +1,79 @@
+{
+  // Language Server Path (adjust as needed)
+  "python.pythonPath": "/data/data/com.termux/files/usr/bin/python",
+
+  // Autocomplete settings
+  "suggest.autoTrigger": "always",
+  "suggest.noselect": false,
+  "suggest.enablePreselect": true,
+  "suggest.minTriggerInputLength": 1,
+
+  // Formatting
+  "coc.preferences.formatOnSaveFiletypes": ["python"],
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "black",
+  "python.formatting.blackArgs": ["--line-length", "88"],
+
+  // Linting options
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": ["--disable=C0114,C0115,C0116"], // Disables docstring linting
+  "python.linting.flake8Enabled": false, // Set to true if using flake8
+  "python.linting.mypyEnabled": true, // Enable mypy type checking
+  "python.linting.mypyArgs": ["--ignore-missing-imports"],
+
+  // Diagnostic settings
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextPrefix": "■",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.refreshAfterSave": true,
+  "diagnostic.level": "hint", // Show diagnostics from hints to errors
+
+  // Hover and documentation
+  "hover.target": "float",
+  "signature.target": "float",
+  "suggest.floatEnable": true,
+  "floatFactory.autoHide": true,
+  "coc.preferences.selectPreference": "first",
+  "coc.preferences.triggerAfterInsertEnter": true,
+  "coc.preferences.hoverTarget": "float",
+  "coc.preferences.signatureHelpTarget": "float",
+
+  // Snippets
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snips",
+  "suggest.snippetsSupport": true,
+  "suggest.triggerAfterInsertEnter": true,
+
+  // Go-to-definition and references
+  "coc.preferences.jumpCommand": "edit",
+  "python.analysis.typeCheckingMode": "basic",
+  "python.analysis.autoImportCompletions": true,
+
+  // Python-specific settings
+  "pyright.disableOrganizeImports": false,
+  "python.analysis.autoSearchPaths": true,
+  "python.analysis.useLibraryCodeForTypes": true,
+
+  // Other editor preferences
+  "coc.preferences.extensionUpdateCheck": "daily",
+  "coc.preferences.diagnostic.displayByAle": false,
+  "coc.preferences.formatOnType": false,
+
+  // Tab and indentation
+  "coc.preferences.tabstop": 4,
+  "coc.preferences.shiftwidth": 4,
+  "coc.preferences.expandtab": true,
+
+  // Keymap options
+  "keymap": {
+    "gd": "coc-definition",
+    "gr": "coc-references",
+    "gi": "coc-implementation",
+    "K": "coc-hover",
+    "<leader>rn": "coc-rename",
+    "<leader>a": "coc-codeaction",
+    "<leader>f": "editor.action.formatDocument",
+    "<C-k>": "coc-diagnostic-prev",
+    "<C-j>": "coc-diagnostic-next"
+  }
+}
